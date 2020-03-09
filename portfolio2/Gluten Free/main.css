@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial';
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+body {
+    background-color: #BF925A;
+}
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: #F25C05;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.header-title {
+    height: 80px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+#Instruction {
+    margin: 8rem 0 5rem 0;
+}
+.instruction-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    justify-content: center;
+}
+.instruction-img {
+    width: 85%;
+    height: auto;
+    padding: 1rem;
+    transition: .5s;
+    border-radius: 50%;
+}
+.instruction-img:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+    border-radius: 50%;
+    transform: scale(1.05);
+}
+.instruction-img  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.instruction-info {
+    line-height: 2rem;
+}
+.instruction-info h2 {
+    font-size: 1.8rem;
+    color: #594020;
+    padding: 1.5rem 0;
+}
+.instruction-info p {
+    font-size: 1.1rem;
+}
+#ingredient {
+    background-color: #594020;
+    padding: 1rem 0;
+}
+.ingredient-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.ingredient-info {
+    line-height: 2rem;
+
+}
+.ingredient-info h2 {
+    color: #BF925A;
+    font-size: 1.8rem;
+    padding: 1.5rem 0;
+    width: 100%;
+}
+.ingredient-info li {
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+}
+.ingredient-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.ingredient-img img {
+    width: 400px;
+    height: 250px;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 5px;
+}
+.ingredient-img img:hover {
+    transform: translateY(-10px);
+}
+#recommend {
+    text-align: center;
+    margin: 1rem 0 5rem 0;
+}
+.recommend-header {
+    line-height: 4rem;
+}
+.recommend-header h1 {
+    padding: 1rem 0 0 0; 
+    color: #594020;
+}
+.recommend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 2rem;
+}
+.recommend-items {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    transition: .5s;
+}
+.recommend-items img {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+}
+.recommend-items:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .3);
+    transform: translateY(-10px);
+}
+.recommend-items span {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #F25C05;
+    padding: 5px 10px;
+    color: #fff;
+    transition: .3s;
+    cursor: pointer;
+}
+.recommend-items figcaption {
+    position: absolute;
+    bottom: 1rem;
+    background-color: rgba(240, 91, 5,.5);
+    padding: .5rem 0;
+}
+footer {
+    height: 70px;
+    background-color: #F25C05;
+    text-align: center;
+    font-size: 1.5rem;
+}
+footer p{
+    padding-top: 1.5rem;
+}
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media screen and (max-width : 768px) {
+    .container {
+        max-width: 620px;
+    }
+    .header-title {
+        font-size: 1rem;
+    }
+    .instruction-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .ingredient-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+}
